@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT HolidayAccomodation (property*)>
+
+<!ELEMENT property (price, location, address, bedroom, title, description,distance?, user, image* , addtionalDetails?)>
+
+<!ATTLIST property propertyId CDATA #REQUIRED>
+
+<!ATTLIST property db (BH|SW) "BH">
+
+<!ELEMENT price (#PCDATA)>
+<!ELEMENT location (#PCDATA)>
+<!ELEMENT address (#PCDATA)>
+<!ELEMENT bedroom (#PCDATA)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT distance (#PCDATA)>
+
+<!ELEMENT user (username, email)>
+<!ELEMENT username (#PCDATA)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT image (imageType?,imageName?,imageData)>
+
+<!ATTLIST image imageId CDATA #REQUIRED>
+
+<!ELEMENT imageType (#PCDATA)>
+<!ELEMENT imageName (#PCDATA)>
+<!ELEMENT imageData (#PCDATA) >
+
+<!ELEMENT addtionalDetails (kitchen?, bathroom?, livingRoom?, garage?, carpet?, latitude?, longitude?)>
+<!ELEMENT kitchen (#PCDATA)>
+<!ELEMENT bathroom (#PCDATA)>
+<!ELEMENT livingRoom (#PCDATA)>
+<!ELEMENT garage (#PCDATA)>
+<!ELEMENT carpet (#PCDATA)>
+<!ELEMENT latitude (#PCDATA)>
+<!ELEMENT longitude (#PCDATA)>
